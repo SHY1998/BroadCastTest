@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/tv_scanResult"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="请输入或扫描要对接的设备Mac" />
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="扫描二维码"/>
+
+    <RelativeLayout
+        android:id="@+id/loadPart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:visibility="invisible"
+        tools:ignore="DuplicateIds">
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            tools:ignore="UselessParent">
+            <androidx.appcompat.widget.AppCompatImageView
+
+                android:id="@+id/loading"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/amin_pgbar"
+                android:layout_gravity="center"/>
+            <TextView
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="数据加载中"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/conTest"
+            android:text="搜索设备"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:textColor="@color/status_text"
+            android:background="@color/result_view"
+            android:layout_height="60dp"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
